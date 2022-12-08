@@ -1,0 +1,11 @@
+Link
+https://www.kaggle.com/datasets/oliverhayman/word-relationships-in-conceptnet
+
+Posibles relaciones del dataset
+https://github.com/commonsense/conceptnet5/wiki/Relations
+
+Todos los idiomas
+https://github.com/commonsense/conceptnet5/wiki/Languages
+
+Página de conceptos
+https://conceptnet.io
