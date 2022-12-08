@@ -1,0 +1,37 @@
+Base de datos
+
+NoSQL -> Debido a las relaciones entre las palabras
+Tener una base de datos relacional puede llegar a ser muy grande y difícil de manejar con tantos datos
+
+Bases de datos orientada a grafos
+Porque permite una mayor flexibilidad para los datos, ya que las relaciones entre los nodos (Palabras) se les puede dar también atributos
+
+https://en.wikipedia.org/wiki/Graph_database
+
+MongoDB se tenía planeado desde un principio hasta que descubrí que es una base de datos orientada a documentos
+Se opta por ahora (7/9/2022) por Neo4j que es una base de datos orientada a grafos nativa
+
+https://neo4j.com/developer/graph-database/
+https://www.g2.com/categories/graph-databases
+https://neo4j.com/use-cases/knowledge-graph/ -> Buen documento para explicar que la posible base de datos va a ser un grafo de conocimiento
+
+Link para pasar de un dataset a gráfo
+https://www.youtube.com/watch?v=fdPWH4P4V5A&feature=youtu.be
+
+Se decide mejor usar una base de datos relacional debido a la estructura del CSV y por las limitaciones de Neo4j respecto al uso de las instancias.
+
+Se usa "appserv", que es una herramienta hecha en PHP y por medio de Apache, permite el uso de una base de datos basada en MySQL
+
+Detección de etiquetas
+Se necesita porque a partir de las etiquetas obtenidas, el programa luego usará la base de datos para detectas las relaciones contextuales
+Para las etiquetas, se usarán APIs en vez de crear una algoritmo desde 0.
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-describing-images
+""""""""""""""""""""""""" Posibles a usar """""""""""""""""""""""""
+https://cloud.google.com/vision/docs/labels?hl=es-419
+https://labelstud.io/
+https://www.inferdo.com/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+

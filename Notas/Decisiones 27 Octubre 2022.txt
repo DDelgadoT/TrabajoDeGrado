@@ -1,0 +1,19 @@
+Se encontró que para realizar las oraciones se necesitan todas las partes, haciendo referencia 
+a sustantivo, verbo y predicado. Verbos no se encuentran muchos en la base de datos. Se sugiere 
+buscar un algoritmo que pueda generar oraciones con palabras que se les de y con prioridad. Generar 
+varias oraciones para poder calificar y mejorar el tuning.
+
+keytotext -> Librería de Python para generar oraciones a partir de palabras clave
+https://medium.com/mlearning-ai/generating-sentences-from-keywords-using-transformers-in-nlp-e89f4de5cf6b
+https://pypi.org/project/keytotext/
+
+Otros generadores para hacer oraciones con palabras clave
+https://www.123teachme.com/translated_sentences/en/library
+
+Libería de lenguaje natural
+https://www.analyticsvidhya.com/blog/2021/05/top-8-python-libraries-for-natural-language-processing-nlp-in-2021/
+
+Se tiene una idea para generar oraciones que se deseen. Se usan las oraciones generadas por el modelo predeterminado.
+Se guardan las oraciones que mejor se deseen para generar otro modelo que sea más cercano a lo que se quiere inicialmente.
+En otras palabras, como una recursividad.
+

@@ -1,0 +1,4 @@
+Bases de datos no relacional -> CP o CA (MongoDB provisional)
+Lenguaje de programación -> Python (Provisional debido a que se puede hacer la parte gráfica también)
+
+Puede que haya bases de datos o datasets con relaciones contextuales
