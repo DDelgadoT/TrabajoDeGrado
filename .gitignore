@@ -3,3 +3,4 @@
 venv/
 csvs divido/
 __pycache__/
+*.env
