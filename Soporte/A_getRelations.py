@@ -1,5 +1,8 @@
-# Conseguir las relaciones
+# Obtener las posibles relaciones que hay netre las palabras
+
 import csv
+
+# Retorna todos los valores posibles en la columna "Relationship" del dataset
 def conseguirTipoRelaciones(dataset):
     with open(dataset, encoding = 'cp850') as file:
         readerCSV = csv.DictReader(file)
@@ -8,5 +11,6 @@ def conseguirTipoRelaciones(dataset):
             if not(any(elem in row['Relationship'] for elem in relaciones)):
                 relaciones.append(row['Relationship'])
         print(relaciones)
+
 dataset = "WordsEnglishOnlyClean.csv"
 conseguirTipoRelaciones(dataset)

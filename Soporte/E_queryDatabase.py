@@ -1,7 +1,10 @@
+# Consultas a base de datos
+
 import Soporte.D_ConnectDB as D, time, datetime
 
 tiempoInicio = time.time()
 
+# Devuelve los resultados de una consulta personalizada
 def getWords(query, word):
     connection = D.conectarBD()
     with connection.cursor() as cursor:
@@ -9,6 +12,7 @@ def getWords(query, word):
         result = cursor.fetchall()
         print(result)
 
+# Devuelve las relaciones que dos palabras puedan tener (Pueden ser una o varias)
 def getRelationFrom2Words(words):
     connection = D.conectarBD()
     with connection.cursor() as cursor:
