@@ -1,61 +1,48 @@
 #  Generación de oraciones
 
-import time, datetime, random
-from gettingRelationsFromDB import returnSelectedWords
-from Soporte.G_affinityOfLists import getAffinity
-import Soporte.F_cleaningOfListOfWords as F
+import random, math
+import extractTagsWithAzure as cvazure
 
-tiempoInicio = time.time()
+wordsSegmentation = []
+
+def getTags(image_url):
+    global wordsSegmentation
+    wordsSegmentation = cvazure.tagImage(image_url)
+    tags = ""
+    tags = ', '.join(wordsSegmentation)
+    return tags
 
 # RETORNO de una muestra de una lista de palabras limpias de stopwords y singularizadas
-def getCombinationOfWords(listOfWords, numberOfWordsPerSample, numberOfSentences):
+def getCombinationOfWords(originalWords, listOfWords, numberOfWordsPerSample, numberOfSentences):
+    import Soporte.F_cleaningOfListOfWords as cleaning
+    import Soporte.G_affinityOfLists as aff
     sampleSelectedWords = list() # Lista de palabras que se van a usar para hacer oraciones
-    listOfWords = F.cleaning(listOfWords)
+    listOfWords = cleaning.cleaning(listOfWords)
     while numberOfSentences > 0:
-        auxSample = random.sample(listOfWords, numberOfWordsPerSample)
+        auxSample = random.sample(originalWords, math.floor(1 + (numberOfWordsPerSample / 3))) + random.sample(listOfWords, math.floor(1 + (numberOfWordsPerSample / 2)))
         auxSample.sort()
         if auxSample not in sampleSelectedWords:
-            sampleSelectedWords.append(auxSample)
-            numberOfSentences = numberOfSentences - 1
+            if aff.getAffinity(auxSample) > 0:
+                random.shuffle(auxSample)
+                sampleSelectedWords.append(auxSample)
+                numberOfSentences = numberOfSentences - 1
     return sampleSelectedWords
-
-# GENERACIÓN de oraciones con una lista de palabras organizadas alfabéticamente
-def getSentenceWithSortedOrder(words):
-    from keytotext import pipeline # Se coloca aquí para evitar aumentar el tiempo de ejecucción
-    nlp = pipeline("k2t-base")
-    print("----------------------------------------------------------------")
-    print("Oraciones con las palabras organizadas")
-    for i in words:
-        print(i)
-        print("Oración: ", end="")
-        print(nlp(i))
 
 # GENERACIÓN de oraciones con una lista de palabras desorganizadas alfabéticamente
 def getSentenceWithRandomOrder(words):
-    from keytotext import pipeline # Se coloca aquí para evitar aumentar el tiempo de ejecucción
+    from keytotext import pipeline
     nlp = pipeline("k2t-base")
-    print("----------------------------------------------------------------")
-    print("Oraciones con las palabras desorganizadas")
-    for i in range(len(words)):
-        words[i] = random.sample(words[i], len(words[i]))
+    generatedSenteces = ""
     for i in words:
-        print(i)
-        print("Oración: ", end="")
-        print(nlp(i))
+        generatedSenteces = generatedSenteces + "----------------------------------------------------------------"
+        generatedSenteces = generatedSenteces + "\n" + "[" + ', '.join(i) + "]"
+        generatedSenteces = generatedSenteces + "\n" + nlp(i) + "\n"
+    return generatedSenteces
 
 # GENERACIÓN de oraciones
-def generarOraciones():
-    listOfWords = returnSelectedWords() # Palabras elegidas por heurística
-    sampleSelectedWords = getCombinationOfWords(listOfWords, 5, 5) # Se eligen 5 oraciones de 5 palabras cada una
-    print(sampleSelectedWords) # Lista de la muestra de palabras
-    return
-    getSentenceWithSortedOrder(sampleSelectedWords)
-    getSentenceWithRandomOrder(sampleSelectedWords)
-
-generarOraciones()
-
-# ------------- METRICAS ------------- 
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
+def generarOraciones(wordsPerSentence, sentences):
+    import gettingRelationsFromDB as getDB
+    listOfWords = getDB.returnSelectedWords(wordsSegmentation) # Palabras elegidas por heurística
+    sampleSelectedWords = getCombinationOfWords(wordsSegmentation, listOfWords, wordsPerSentence, sentences) # Se eligen 5 oraciones de 5 palabras cada una
+    allSenteces = getSentenceWithRandomOrder(sampleSelectedWords)
+    return allSenteces
