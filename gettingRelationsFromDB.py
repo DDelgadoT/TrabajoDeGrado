@@ -1,7 +1,7 @@
 # Obtener las palabras que estén relacionadas con una lista de palabras
 
 import time, datetime
-from Soporte.D_ConnectDB import conectarBD
+import Soporte.D_ConnectDB as connectDB
 
 #tiempoInicio = time.time()
 wordsRelated, wordsWithRelationships = list(), list()
@@ -11,7 +11,7 @@ wordsRelated, wordsWithRelationships = list(), list()
 # SETEO de lista donde se obtienen todas las posibles relaciones que existan con las palabras obtenidas de la segmentación
 def getWords(wordsFromSeg):
     indexWord = 0
-    connection = conectarBD()
+    connection = connectDB.conectarBD()
     with connection.cursor() as cursor:
         sql = "SELECT `Word 1`,`Word 2`,`Relationship` FROM `words_relations` WHERE `Word 1`=%s"
         for i in wordsFromSeg:
@@ -71,10 +71,8 @@ def searchForTupleWithWord(listOfTuples, word):
             print(tuple)
 
 # RETORNO de una lista de palabras relacionadas que tengan una probabilidad mayor de aparición con relación de "RelatedTo" a un umbral deseado
-def returnSelectedWords():
-    wordsSegmentation = ["dog", "house", "outside"]
-    wordsSegmentation2 = ["building", "city", "white"]
-    getWords(wordsSegmentation2)
+def returnSelectedWords(segmentacionImagenes):
+    getWords(segmentacionImagenes)
     contadorRelaciones()
     return getWordsWithCount(getWordsFromTuplesWithWantedRelation(relationCounter, "RelatedTo"), 0.75)
 
@@ -83,5 +81,5 @@ def returnSelectedWords():
 tiempoEjecuccion = time.time() - tiempoInicio
 print()
 print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
+print(f"Tiempo de procesamiento 'gettingRelationsFromDB': {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
 """
