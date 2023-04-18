@@ -1,0 +1,23 @@
+# Llamado a la aplicación de analisis de imágenes para extraer las etiquetas
+
+def tagImage(image_url):
+    from azure.cognitiveservices.vision.computervision import ComputerVisionClient
+    from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
+    from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
+    from msrest.authentication import CognitiveServicesCredentials
+
+    results = []
+
+    subscription_key = "b4768c1c32e74879a0cc79f7acaf7a52"
+    endpoint = "https://contextdescriptor.cognitiveservices.azure.com/"
+
+    computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
+
+    tags_result_remote = computervision_client.tag_image(image_url)
+    if (len(tags_result_remote.tags) == 0):
+        results.append("No tags detected.")
+    else:
+        for tag in tags_result_remote.tags:
+            if tag.confidence > 0.85:
+                results.append(tag.name)
+    return results
