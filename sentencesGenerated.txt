@@ -1,0 +1,77 @@
+Método para la verificación de afinidad: Permutación
+Nivel de afinidad: Mayor a 0
+
+- https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F221129115959-houses-that-can-save-the-world-7.jpg
+
+    Casa en las nieves
+
+    Tags: outdoor, snow, tree, winter, freezing, slope
+
+    [trail, slope, cloudless, wintertime, outdoor]
+    The location of the trail is cloudless and wintertime in outdoor.
+
+    [mountain, snow, tree, item, mountainside]
+    The mountainside area is covered by a snowman called the mountainside.
+
+    [coldness, winter, two, slope, condensation]
+    The two types of coldness in winter are cold weather and snow.
+
+    [pole, snow, outdoor, open, green]
+    The pole is made of snow and is open to the open to green.
+
+    [slope, freezing, fry, going, room]
+    There is a place to go with the family to eat at a temperature of minus 30 degrees called slope.
+
+- https://img.freepik.com/fotos-premium/fondo-arrecife-coral-ecosistema-vida-marina-submarina-oceano-mar_548821-45539.jpg?w=2000
+
+    Arrecife
+
+    Tags: water, underwater, marine biology, organism, coral reef, reef, fish, nature, coral reef fish, stony coral, aquarium, fish supply, aquarium decor, seaweed
+
+    [outdoors, water, innate, metal, coral reef fish]
+    The innate coral reef fish is an innate part of water
+
+    [pond, gaseous, nature, organic, stony coral]
+    The pond is made from stony coral.
+
+    [flat, bait, amphibian, coral reef, nature]
+    The rocker is amphibian and coral reef nature.
+
+    [well, coral reef, water, earth, gaseous]
+    The well-known coral reef is located in the earth of the gaseous.
+
+- https://humanidades.com/wp-content/uploads/2017/03/ciudad-contaminacion-e1565899923422.jpg
+
+    Calle de ciudad
+
+    Tags: outdoor, land vehicle, vehicle, road, street, building, taxi, traffic, car, sky, wheel, city, downtown, urban area
+
+    [street, car, starry, common, avenue]
+    The street name of the street with the common name of "arth is "street".
+
+    [car, ray, outside, sky, apartment]
+    The location of the car with a ray of the sky is apartment.
+
+    [name, natural, building, city, door]
+    The natural name of the building in the city of door is natural.
+
+    [wheel, flowing, transport, angel, sky]
+    The wheel is a transport vehicle for the angel sky.
+
+- https://rooftopatpier17.com/wp-content/uploads/2023/03/ADTR_Pier17_Keeyahtay-52-1560x960.jpg
+
+    Concierto
+
+    Tags: concert, crowd, audience, event, music, entertainment, person, man, rave, clothing
+
+    [entertainment, social, violin, well, man]
+    The musical genre of the musician who plays the violin is well established.
+
+    [big, alive, crowd, person, fitting]
+    The crowd is suited for a place with the full name of "live".
+
+    [person, marketplace, impersonate, accident, event]
+    Impersonate is an event for the whole family.
+
+    [crowd, popular, muscle, devotee, concert]
+    The crowd is popular with the popular musical genre of "move in concert".
