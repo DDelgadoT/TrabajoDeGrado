@@ -75,3 +75,22 @@ Nivel de afinidad: Mayor a 0
 
     [crowd, popular, muscle, devotee, concert]
     The crowd is popular with the popular musical genre of "move in concert".
+
+- https://static.toiimg.com/photo/msid-90042369,width-96,height-65.cms
+
+    Estación de tren
+
+    Tags: train, building, transport, train station, public transport, railway, transport hub, vehicle, railroad, rolling stock, track, metro station, platform, metro, passenger car, land vehicle, railroad car, electric locomotive
+
+    [gunpowder, house, building, truck, railroad]
+    Gunpowder was a builder of the railroad.
+
+    [railroad, transport, tramway, hold, talent]
+    The railroad's hold the title of "trick" and "trail is hold by talent.
+
+    [train station, track, horse, rapid, glow]
+    The train station has a rapid glow.
+
+    [metro, mechanical, transport, crossing, transportage]
+    The metro has a mechanical gearbox and a transport system, which is a type of transport of transport.
+
