@@ -22,6 +22,9 @@ Nivel de afinidad: Mayor a 0
     [slope, freezing, fry, going, room]
     There is a place to go with the family to eat at a temperature of minus 30 degrees called slope.
 
+    GPT: "During the wintertime, outdoor enthusiasts can enjoy skiing or snowboarding down the steep slope of a mountain, breathing in the crisp cloudless air as they carve their way along the winding trail."
+    Prompt: "Generate a sentences with the following words: trail, slope, cloudless, wintertime, outdoor"
+
 - https://img.freepik.com/fotos-premium/fondo-arrecife-coral-ecosistema-vida-marina-submarina-oceano-mar_548821-45539.jpg?w=2000
 
     Arrecife
@@ -39,6 +42,9 @@ Nivel de afinidad: Mayor a 0
 
     [well, coral reef, water, earth, gaseous]
     The well-known coral reef is located in the earth of the gaseous.
+
+    GPT: "The coral reef is a thriving ecosystem, teeming with life both in the clear waters above and in the earth beneath, while gaseous bubbles rise up from the well below, reminding us of the intricate connections that exist between the land, water, and atmosphere."
+    Prompt: "Now, generate a sentence with the following words: well, coral reef, water, earth, gaseous"
 
 - https://humanidades.com/wp-content/uploads/2017/03/ciudad-contaminacion-e1565899923422.jpg
 
@@ -58,6 +64,9 @@ Nivel de afinidad: Mayor a 0
     [wheel, flowing, transport, angel, sky]
     The wheel is a transport vehicle for the angel sky.
 
+    GPT: "On any common avenue or quiet street, one might catch a glimpse of a sleek car gliding beneath the starry night sky, a fleeting reminder of the endless possibilities that await beyond our everyday routines."
+    Prompt: "Generate a sentence with the following words: street, car, starry, common, avenue"
+
 - https://rooftopatpier17.com/wp-content/uploads/2023/03/ADTR_Pier17_Keeyahtay-52-1560x960.jpg
 
     Concierto
@@ -75,6 +84,9 @@ Nivel de afinidad: Mayor a 0
 
     [crowd, popular, muscle, devotee, concert]
     The crowd is popular with the popular musical genre of "move in concert".
+
+    GPT: "Standing in the middle of a big, lively crowd, it's easy to feel both small and alive at the same time, a single person fitting into a greater tapestry of humanity."
+    Prompt: "Generate a sentence with the following words: big, alive, crowd, person, fitting"
 
 - https://static.toiimg.com/photo/msid-90042369,width-96,height-65.cms
 
@@ -94,3 +106,5 @@ Nivel de afinidad: Mayor a 0
     [metro, mechanical, transport, crossing, transportage]
     The metro has a mechanical gearbox and a transport system, which is a type of transport of transport.
 
+    GPT: "The metro is a marvel of mechanical transport, whisking commuters from one crossing of the city to another with efficient and reliable transportage."
+    Prompt: "Generate a sentence with the following words: metro, mechanical, transport, crossing, transportage"
