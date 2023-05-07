@@ -46,7 +46,7 @@ layout = [
     ]
 ]
 
-window = sg.Window("Descriptor de imágenes", layout, size=(1380, 800))
+window = sg.Window("ContextVision", layout, size=(1380, 800))
 
 # Run the Event Loop
 while True:
