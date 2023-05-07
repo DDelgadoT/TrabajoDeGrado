@@ -1,8 +1,9 @@
 # Consultas a base de datos
+# Solo usada para realizar pruebas en la base de datos
 
 import Soporte.D_ConnectDB as db
 
-# Devuelve los resultados de una consulta personalizada
+# RETORNO de los resultados de una consulta personalizada
 def getWords(query, word):
     connection = db.conectarBD()
     with connection.cursor() as cursor:
@@ -10,7 +11,7 @@ def getWords(query, word):
         result = cursor.fetchall()
         return result
 
-# Devuelve las relaciones que dos palabras puedan tener (Pueden ser una o varias)
+# RETORNO de las relaciones que dos palabras puedan tener (Pueden ser una o varias)
 def getRelationFrom2Words(words):
     connection = db.conectarBD()
     with connection.cursor() as cursor:

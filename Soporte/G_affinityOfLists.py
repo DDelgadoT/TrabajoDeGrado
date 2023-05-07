@@ -3,8 +3,9 @@
 import itertools as itools
 import Soporte.E_queryDatabase as queryDB
 
-# Crea las permutaciones de una lista y retorna la afinidad total de lista hallando la afinidad entre todos los pares posibles de palabras
-# La afinidad se define como que la relación dos palabras sea "RelatedTo"
+# RETORNO de la afinidad total de lista
+# Para verificar la afinidad se crean las permutaciones de una lista y se realiza la verifiación
+# La afinidad se define como que la relación dos palabras sea "RelatedTo", "Synonym" o "UsedFor"
 def getAffinity(lista, ):
     afinidad = 0
     wantedRelations = ["RelatedTo", "Synonym", "UsedFor"]
@@ -17,6 +18,7 @@ def getAffinity(lista, ):
                 afinidad += 1
     return afinidad
 
+# SOPORTE
 # Imprime la afinidad de una lista de listas de palabras
 def printAffinities(lista):
     for i in lista:

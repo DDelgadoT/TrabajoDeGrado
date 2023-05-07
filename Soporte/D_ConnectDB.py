@@ -1,8 +1,7 @@
-# Creación de la conexión para la base de datos y diversas funciones más para verificaciones
-
+# Creación de la conexión para la base de datos y diversas funciones para verificaciones
 import pymysql.cursors
 
-# Retorna la conexión para la base de datos
+# RETORNO la conexión para la base de datos local
 def conectarBD():
     connection = pymysql.connect(host='localhost',
                 user='root',
@@ -10,13 +9,15 @@ def conectarBD():
                 database='trabajo_grado')
     return connection
 
+# Retorna la conexión para la base de datos remota
 """def conectarBD():
     connection = pymysql.connect(host='trabajogradounivalle.cnci5bmkxmhz.us-east-1.rds.amazonaws.com',
                 user='admin',
                 password='admin1234',
                 database="words_relations")
     return connection"""
-
+# SOPORTE
+# Creación base de datos
 def crearBD():
     connection = conectarBD()
     cursor = connection.cursor()
@@ -24,6 +25,8 @@ def crearBD():
     cursor.execute(sql)
     cursor.connection.commit()
 
+# SOPORTE
+# Creación de una tabla en la BD
 def createTable():
     connection = conectarBD()
     cursor = connection.cursor()
@@ -33,6 +36,8 @@ def createTable():
     print("Model: id int NOT NULL AUTO_INCREMENT, Word1 varchar(255), Word2 varchar(255), Relationship varchar(255), PRIMARY KEY (id))")
     cursor.execute(sql)
 
+# SOPORTE
+# Verificar las tablas en la BD
 def checkTables():
     connection = conectarBD()
     cursor = connection.cursor()
@@ -41,6 +46,8 @@ def checkTables():
     print("Tables:")
     print(cursor.fetchall())
 
+# SOPORTE
+# Revisar contenidos de una tabla
 def checkContentTable():
     connection = conectarBD()
     cursor = connection.cursor()
@@ -48,7 +55,9 @@ def checkContentTable():
     cursor.execute(sql)
     for i in range(0, 25):
         print(cursor.fetchone())
-    
+
+# SOPORTE
+# Eliminar el contenido de una tabla
 def deleteContentTable():
     connection = conectarBD()
     cursor = connection.cursor()

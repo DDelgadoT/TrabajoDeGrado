@@ -1,8 +1,9 @@
 # Obtener un dataset que contenga un número definido de filas de un dataset más grande
+# Solo es usada para dividir un dataset para ser subido por partes
 
-import csv, time, datetime, math, random
+import csv, math, random
 
-# Retorna una porción del dataset
+# Creación de una porción de un dataset
 def conseguirCantidadPalabras(datasetOriginal, datasetNuevo, cantidad):
     row_count = 0
     with open(datasetOriginal, encoding = 'cp850') as originalFile:

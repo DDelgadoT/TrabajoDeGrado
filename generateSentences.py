@@ -5,6 +5,7 @@ import extractTagsWithAzure as cvazure
 
 wordsSegmentation = []
 
+# Almacenamiento de las etiquetas para evitar realizar llamados constantes al recurso de Computer Vision
 def getTags(image_url):
     global wordsSegmentation
     wordsSegmentation = cvazure.tagImage(image_url)
@@ -43,6 +44,6 @@ def getSentenceWithRandomOrder(words):
 def generarOraciones(wordsPerSentence, sentences):
     import gettingRelationsFromDB as getDB
     listOfWords = getDB.returnSelectedWords(wordsSegmentation) # Palabras elegidas por heurística
-    sampleSelectedWords = getCombinationOfWords(wordsSegmentation, listOfWords, wordsPerSentence, sentences) # Se eligen 5 oraciones de 5 palabras cada una
+    sampleSelectedWords = getCombinationOfWords(wordsSegmentation, listOfWords, wordsPerSentence, sentences) # Se eligen X oraciones de Y palabras cada una
     allSenteces = getSentenceWithRandomOrder(sampleSelectedWords)
     return allSenteces

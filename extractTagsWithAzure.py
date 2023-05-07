@@ -1,5 +1,6 @@
 # Llamado a la aplicación de analisis de imágenes para extraer las etiquetas
 
+# RETORNO de las etiquetas de la segmentación a partir de una confianza dada
 def tagImage(image_url):
     from azure.cognitiveservices.vision.computervision import ComputerVisionClient
     from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes

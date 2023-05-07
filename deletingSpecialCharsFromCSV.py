@@ -1,7 +1,7 @@
 # Retorno de un .csv sin caracteres especiales como el "@"
 import csv, time, datetime
 
-# Crea un nuevo .csv donde ninguna de las dos palabras contenga caracteres especiales
+# Creación de un nuevo .csv donde ninguna de las dos palabras contenga caracteres especiales
 def limpiezaDeCaracteres(datasetOriginal, datasetNuevo, chars):
     # Se obtienen la cabecera
     with open(datasetOriginal, encoding = 'cp850') as originalFile:

@@ -1,11 +1,13 @@
-# Limpieza de un conjunto de palabras
+# Estandarización de una lista de palabras
 
 import nltk.stem as stem
 
+# INSTALACION PAQUETES
 #nltk.download('omw-1.4')
 #nltk.download("stopwords")
 
-# Limpieza de stopwords
+# SOPORTE
+# RETORNO de la limpieza de stopwords
 def cleanListOfWordsFromStepWords(listaPalabras):
     from nltk.corpus import stopwords
     step_words_en = stopwords.words("english")
@@ -14,7 +16,8 @@ def cleanListOfWordsFromStepWords(listaPalabras):
             listaPalabras.remove(i)
     return listaPalabras
 
-# Singulariza todas las palabras de una lista
+# SOPORTE
+# RETORNO de la singularización de todas las palabras de una lista
 def singularizeList(listaPalabras):
     singularize = stem.WordNetLemmatizer()
     listaPalabras = [singularize.lemmatize(word) for word in listaPalabras]
