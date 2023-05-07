@@ -1,6 +1,11 @@
 *.csv
 *.zip
+*.spec
+*.env
+main.spec
+
 venv/
 csvs divido/
 __pycache__/
-*.env
+build/
+dist/
