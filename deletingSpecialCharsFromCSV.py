@@ -1,8 +1,5 @@
 # Retorno de un .csv sin caracteres especiales como el "@"
-
 import csv, time, datetime
-
-#tiempoInicio = time.time()
 
 # Crea un nuevo .csv donde ninguna de las dos palabras contenga caracteres especiales
 def limpiezaDeCaracteres(datasetOriginal, datasetNuevo, chars):
@@ -47,11 +44,3 @@ datasetOriginal = "CSVs/WordsEnglishOnly.csv"
 datasetNuevo = "CSVs/WordsEnglishOnlyClean.csv"
 chars = frozenset(r'_.@')
 limpiezaDeCaracteres(datasetOriginal, datasetNuevo, chars)
-
-# ------------- METRICAS -------------
-"""
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
-"""

@@ -1,8 +1,5 @@
 # Conseguir palabras que solo tengan las relaciones que se desean
-
-import csv, time, datetime
-
-#tiempoInicio = time.time()
+import csv
 
 # Crea un nuevo .csv donde solo se encuentren las relaciones que se deseen
 def conseguirPalabrasRelaciones(datasetOriginal, datasetNuevo, relations):
@@ -47,11 +44,3 @@ datasetOriginal = "CSVs/WordsEnglishOnlyClean.csv"
 datasetNuevo = "CSVs/WordsEnglishWantedRelations.csv"
 relations = ("Antonym", "FormA", "HasContext", "IsA", "MadeOf", "PartOf", "RelatedTo", "SimilarTo", "SymbolOf", "Synonym", "UsedFor") # Relaciones deseadas
 conseguirPalabrasRelaciones(datasetOriginal, datasetNuevo, relations)
-
-# ------------- METRICAS ------------- 
-"""
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
-"""

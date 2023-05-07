@@ -1,9 +1,6 @@
 # Obtener las palabras que estén relacionadas con una lista de palabras
-
-import time, datetime
 import Soporte.D_ConnectDB as connectDB
 
-#tiempoInicio = time.time()
 wordsRelated, wordsWithRelationships = list(), list()
 # wordsRelated = (word, word, word, ...)
 # wordsWithRelationships = ((word, word, relation),(word, word, relation),(word, word, relation),...)
@@ -75,11 +72,3 @@ def returnSelectedWords(segmentacionImagenes):
     getWords(segmentacionImagenes)
     contadorRelaciones()
     return getWordsWithCount(getWordsFromTuplesWithWantedRelation(relationCounter, "RelatedTo"), 0.75)
-
-# ------------- METRICAS -------------
-"""
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento 'gettingRelationsFromDB': {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
-"""

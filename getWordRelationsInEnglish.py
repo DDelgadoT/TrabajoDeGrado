@@ -1,8 +1,5 @@
 # Retorno de un .csv en el idioma que se desee
-
-import csv, time, datetime
-
-#tiempoInicio = time.time()
+import csv
 
 # Crea un nuevo .csv donde las filas sean del mismo idioma
 def obtenerIdioma(datasetOriginal, datasetNuevo, language):
@@ -54,11 +51,3 @@ datasetOriginal = "CSVs/WordRelationshipsInConceptNet.csv"
 datasetNuevo = "CSVs/WordsEnglishOnly.csv"
 language = "English"
 obtenerIdioma(datasetOriginal, datasetNuevo, language)
-
-# ------------- METRICAS ------------- 
-"""
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
-"""

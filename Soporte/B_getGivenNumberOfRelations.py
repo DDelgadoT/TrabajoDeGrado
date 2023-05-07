@@ -1,8 +1,6 @@
-# Conseguir palabras que solo tengan las relaciones que se desean
+# Obtener un dataset que contenga un número definido de filas de un dataset más grande
 
 import csv, time, datetime, math, random
-
-tiempoInicio = time.time()
 
 # Retorna una porción del dataset
 def conseguirCantidadPalabras(datasetOriginal, datasetNuevo, cantidad):
@@ -38,9 +36,3 @@ datasetOriginal = "../CSVs/3_WordsEnglishWantedRelations.csv"
 datasetNuevo = "AmountOfWordsGiven.csv"
 cantidadDePalabrasDeseadas = 25000
 conseguirCantidadPalabras(datasetOriginal, datasetNuevo, cantidadDePalabrasDeseadas)
-
-# ------------- METRICAS ------------- 
-tiempoEjecuccion = time.time() - tiempoInicio
-print()
-print()
-print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
