@@ -9,8 +9,8 @@ def tagImage(image_url):
 
     results = []
 
-    subscription_key = "b4768c1c32e74879a0cc79f7acaf7a52"
-    endpoint = "https://contextdescriptor.cognitiveservices.azure.com/"
+    subscription_key = ""
+    endpoint = ""
 
     computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 

@@ -3,18 +3,18 @@ import pymysql.cursors
 
 # RETORNO la conexión para la base de datos local
 def conectarBD():
-    connection = pymysql.connect(host='localhost',
-                user='root',
-                password='admin1234',
-                database='trabajo_grado')
+    connection = pymysql.connect(host='',
+                user='',
+                password='',
+                database='')
     return connection
 
 # Retorna la conexión para la base de datos remota
 """def conectarBD():
-    connection = pymysql.connect(host='trabajogradounivalle.cnci5bmkxmhz.us-east-1.rds.amazonaws.com',
-                user='admin',
-                password='admin1234',
-                database="words_relations")
+    connection = pymysql.connect(host='',
+                user='',
+                password='',
+                database="")
     return connection"""
 # SOPORTE
 # Creación base de datos
