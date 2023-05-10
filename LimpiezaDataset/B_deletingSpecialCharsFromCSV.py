@@ -40,7 +40,7 @@ def limpiezaDeCaracteres(datasetOriginal, datasetNuevo, chars):
     print(f"Cantidad de lineas procesadas: {lineasProcesadas}")
     print(f"Cantidad de lineas limpias sin {chars} procesadas: {lineasLimpias}")
 
-datasetOriginal = "CSVs/WordsEnglishOnly.csv"
-datasetNuevo = "CSVs/WordsEnglishOnlyClean.csv"
+datasetOriginal = "-----/WordsEnglishOnly.csv"
+datasetNuevo = "-----/WordsEnglishOnlyClean.csv"
 chars = frozenset(r'_.@')
 limpiezaDeCaracteres(datasetOriginal, datasetNuevo, chars)

@@ -40,7 +40,7 @@ def conseguirPalabrasRelaciones(datasetOriginal, datasetNuevo, relations):
     print(f"Cantidad de lineas procesadas: {lineasProcesadas}")
     print(f"Cantidad de lineas con las relaciones deseadas procesadas: {lineasLimpias}")
                 
-datasetOriginal = "CSVs/WordsEnglishOnlyClean.csv"
-datasetNuevo = "CSVs/WordsEnglishWantedRelations.csv"
+datasetOriginal = "-----/WordsEnglishOnlyClean.csv"
+datasetNuevo = "-----/WordsEnglishWantedRelations.csv"
 relations = ("Antonym", "FormA", "HasContext", "IsA", "MadeOf", "PartOf", "RelatedTo", "SimilarTo", "SymbolOf", "Synonym", "UsedFor") # Relaciones deseadas
 conseguirPalabrasRelaciones(datasetOriginal, datasetNuevo, relations)

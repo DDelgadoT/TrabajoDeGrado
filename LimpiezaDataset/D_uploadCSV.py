@@ -1,5 +1,4 @@
 # Subida de un csv a una base de datos
-
 import csv, Soporte.D_ConnectDB as BD
 
 # Creación de la conexión a la base de datos

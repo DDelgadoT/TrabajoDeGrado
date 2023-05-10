@@ -47,7 +47,7 @@ def obtenerIdioma(datasetOriginal, datasetNuevo, language):
     print(f"Cantidad de lineas procesadas: {lineasProcesadas}")
     print(f"Cantidad de lineas {language} a {language} procesadas: {lineasIdioma}")
 
-datasetOriginal = "CSVs/WordRelationshipsInConceptNet.csv"
-datasetNuevo = "CSVs/WordsEnglishOnly.csv"
+datasetOriginal = "-----/WordRelationshipsInConceptNet.csv"
+datasetNuevo = "-----/WordsEnglishOnly.csv"
 language = "English"
 obtenerIdioma(datasetOriginal, datasetNuevo, language)
