@@ -11,6 +11,7 @@ def turnImageToPng(image):
     png_data = png_bio.getvalue()
     return png_data
 
+# URL, Image & inputs
 image_viewer = [
     [sg.Text("Ingrese una URL para mostrar la imagen a analizar", key="-SLCT-", )],
     [sg.In(size=(50, 1), expand_x=True, key="-IMAGE URL-")],
@@ -26,15 +27,12 @@ image_viewer = [
     [sg.In(size=(20, 1), disabled=True, key="-SENTENCES-")],
 ]
 
+# Tags & Sentences
 text_boxs = [
     [sg.Text("TAGS:")],
     [sg.Multiline(size=(250, 3), disabled=True, key="-TAGS TEXT-", autoscroll=True)],
     [sg.Text("SENTENCES:")],
     [sg.Multiline(size=(250, 50), disabled=True, key="-SENTENCE TEXT-", autoscroll=True)],
-]
-
-buttons_describe = [
-    
 ]
 
 # ----- Full layout -----
