@@ -1,6 +1,5 @@
 # Obtener un dataset que contenga un número definido de filas de un dataset más grande
 # Solo es usada para dividir un dataset para ser subido por partes
-
 import csv, math, random
 
 # Creación de una porción de un dataset

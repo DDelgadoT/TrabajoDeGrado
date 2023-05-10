@@ -35,15 +35,15 @@ def getSentenceWithRandomOrder(words):
     nlp = pipeline("k2t-base")
     generatedSenteces = ""
     for i in words:
-        generatedSenteces = generatedSenteces + "----------------------------------------------------------------"
         generatedSenteces = generatedSenteces + "\n" + "[" + ', '.join(i) + "]"
         generatedSenteces = generatedSenteces + "\n" + nlp(i) + "\n"
+        generatedSenteces = generatedSenteces + "----------------------------------------------------------------"
     return generatedSenteces
 
 # GENERACIÓN de oraciones
 def generarOraciones(wordsPerSentence, sentences):
     import gettingRelationsFromDB as getDB
-    listOfWords = getDB.returnSelectedWords(wordsSegmentation) # Palabras elegidas por heurística
+    listOfWords = getDB.returnSelectedWords(wordsSegmentation) # Lista de palabras elegidas por heurística
     sampleSelectedWords = getCombinationOfWords(wordsSegmentation, listOfWords, wordsPerSentence, sentences) # Se eligen X oraciones de Y palabras cada una
     allSenteces = getSentenceWithRandomOrder(sampleSelectedWords)
     return allSenteces

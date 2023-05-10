@@ -44,7 +44,7 @@ def getWordsFromTuplesWithWantedRelation(dictionary, relation):
         for item in wordsWithRelationships:
             if item[0] == word:
                 countOfWord += 1
-                if item[1] == relation:
+                if item[1] in relation:
                     countOfRelation += 1
         listWithWordsAndPercentajes[word] = round(countOfRelation/countOfWord, 3)
         countOfWord, countOfRelation = 0, 0
@@ -71,4 +71,4 @@ def searchForTupleWithWord(listOfTuples, word):
 def returnSelectedWords(segmentacionImagenes):
     getWords(segmentacionImagenes)
     contadorRelaciones()
-    return getWordsWithCount(getWordsFromTuplesWithWantedRelation(relationCounter, "RelatedTo"), 0.75)
+    return getWordsWithCount(getWordsFromTuplesWithWantedRelation(relationCounter, ["RelatedTo"]), 0.75)

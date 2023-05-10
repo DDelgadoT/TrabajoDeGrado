@@ -1,6 +1,5 @@
 # Consultas a base de datos
 # Solo usada para realizar pruebas en la base de datos
-
 import Soporte.D_ConnectDB as db
 
 # RETORNO de los resultados de una consulta personalizada

@@ -1,5 +1,4 @@
 # Estandarización de una lista de palabras
-
 import nltk.stem as stem
 
 # INSTALACION PAQUETES

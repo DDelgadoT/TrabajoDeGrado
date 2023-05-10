@@ -1,5 +1,4 @@
 # Devuelve la afinidad de una lista según la relación entre todas tus palabras
-
 import itertools as itools
 import Soporte.E_queryDatabase as queryDB
 

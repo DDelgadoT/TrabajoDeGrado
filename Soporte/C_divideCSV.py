@@ -1,8 +1,8 @@
 # Divide un .csv en varios de tamaños más pequeños
 # NOTA IMPORTANTE: ESTE CÓDIGO NO FUE HECHO POR MI. CREDITOS A Jordi Rivero (https://gist.github.com/jrivero)
 # LINK DEL REPOSITORIO: https://gist.github.com/jrivero/1085501
-
 import os, time, datetime
+
 def split(filehandler, delimiter=',', row_limit=55000, 
     output_name_template='output_%s.csv', output_path='./csvs dividido/', keep_headers=False):
     """
@@ -43,5 +43,5 @@ def split(filehandler, delimiter=',', row_limit=55000,
     tiempoEjecuccion = time.time() - tiempoInicio
     print(f"Tiempo de procesamiento: {str(datetime.timedelta(seconds=tiempoEjecuccion))}")
 
-dataset = "3_WordsEnglishWantedRelations.csv"
+dataset = "WordsEnglishWantedRelations.csv"
 split(open(dataset, 'r', encoding = 'cp850'))

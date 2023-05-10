@@ -1,10 +1,8 @@
 Es iterativo, es decir que cada generación de oraciones no se parecen a otras.
-Cada iteración genera nuevas oraciones.
-El limitado de la semilla para la elección aleatorio se salta importando el paqueta en cada iteración.
 Si la primera palabra de la lista no es un sustantivo, el framework tratará de añadir una para empezar la oración y esto puede que oraciones no tengan sentido.
 Si se trata de aumentar la afinidad de las lista, es posible que se demore mucho más para conseguirla.
 En un principio, se trataba de no agregar las etiquetas a la lista de la oración pero en la mayoría de veces, la oración se desviaba del contexto de la imagen.
-El algoritmo de generación de oraciones parece que no entiende el significado de las palabras
+El algoritmo de generación de oraciones parece que no entiende el significado de las palabras.
 
 El programa se llama "ImageSense", gracias a Chat-GPT, donde se le preguntó: "Give a name that I can give to a software that describes the context of an image"
 y devolvió "How about "ImageSense"? It conveys the idea that the software can interpret and make sense of the context within an image.". Se le preguntó por 
